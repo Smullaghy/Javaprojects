@@ -16,13 +16,13 @@ public class Users {
 		String user = input.next();
 		while (!user.equals("exit")){
 			name.add(user);
+			user = input.next();						// Input.next is defined when the user presses enter. its
+		}												// A function of System.scanner.
+		if(user.equalsIgnoreCase("exit")){				// When the user however types "exit" it will return the names
+		}												// In a array.
+	else{
 			user = input.next();
 		}
-		if(user.equalsIgnoreCase("exit"));{
-		System.out.println("I got the names....");
-		System.out.print(name);
-		}
-
 	return name;
 
 	}

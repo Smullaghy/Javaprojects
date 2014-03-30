@@ -21,7 +21,7 @@ public class DiceRoll {
 
 	}
 
-	public static ArrayList<Integer> userrolls(){
+/*	public static ArrayList<Integer> userrolls(){
 	ArrayList<Integer> roll = new ArrayList<Integer>();
 		int numUsers = Users.mainUsers().size();
 		int counter = 0;
@@ -33,7 +33,7 @@ public class DiceRoll {
 		}while(numUsers>counter);
 	return roll;
 	}
-
+*/
 
 
 

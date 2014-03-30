@@ -13,27 +13,19 @@ public class Dice {
 
 	    System.out.println("Enter 1 to roll the dice for one person. 2 for multiple people. 3 to simulate time to roll a \"Snakeye\".");
 	    //System.out.println("");
-	    Scanner input = new Scanner(System.in);
-	    String answer = input.next();
-		if (answer.equalsIgnoreCase("1")){
-	    float result = rand(1,6);
-		    System.out.println(result);
-	    }
-		else if(answer.equalsIgnoreCase("2")){
-		ArrayList names = Users.mainUsers(); //Grabs the names on the list and stores them as name.
-		int size = names.size();
-			ArrayList<Integer> rollnum = DiceRoll.userrolls();
-			System.out.println(rollnum);
-			System.out.printf("%-20s%-20s%n", names, rollnum);
-			System.out.printf(String.valueOf(names));
-			main(null);
-	    }
-		else if (answer.equals("3")){
-
-			System.out.println(SnakeEyes.slover());
-			main(null);
-
-		}
+	    Scanner input = new Scanner(System.in);						//
+	    String answer = input.next();								//
+			if (answer.equalsIgnoreCase("1")){						//
+			float result = rand(1,6);
+				System.out.println(result);
+			}
+			else if(answer.equalsIgnoreCase("2")){
+				ArrayBuilder.main();
+			}
+			else if (answer.equals("3")){
+				System.out.println(SnakeEyes.slover());
+				main(null);
+			}
 	}
 	public static float rand(int min, int max) {
 		Random foo = new Random();
