@@ -23,21 +23,20 @@ public static void main(){
 
 	System.out.println("How many times do you wish to roll the dice?");
 	Scanner input = new Scanner(System.in);
-	int numOfRolls = input.nextInt();
-	int sizeOfDice = input.nextInt();
-
-		for(int i=1; i<numOfRolls+1; i++){
-			rollsTemp = rollsTemp + "roll" + i +"  ";
+	int numOfRolls = input.nextInt();										//Asks how many times they wish to roll the dice.
+	System.out.println("How big of a dice do you want to roll?");
+	int sizeOfDice = input.nextInt();										//Asks the user the range of the dice.
+		for(int i=1; i<numOfRolls+1; i++){									// This adds a roll+i where I is the number of rolls. Adds +1 where
+			rollsTemp = rollsTemp + "roll" + i +"  ";						//Sees a roll1 not a roll0.
 		}
-	header = header + rollsTemp;
+	header = header + rollsTemp;											
 	System.out.println(header);
 	try {
 		while (arraySize>(counter-1)) {										//Compares the  to the counter to the size of the array.
 			String user = (String) usr.get(counter); 						//it gets the User who is stored in this part of the array. It uses
-			//System.out.printf( "%-8s %5d\n" ,user, DiceRoll.rand1(1,6)); 		//Prints
 			MultipleRolls.roller(numOfRolls, sizeOfDice ,user);
 			counter++;														// Adds +1 to the counter value.
-			//System.out.println(DiceRoll.rand1(1,6));
+
 		}
 
 	}catch(Exception e){}													//The program will call a Exception when it reaches the end of the

@@ -10,32 +10,15 @@ import java.util.Scanner;
 public class DiceRoll {
 	//public static void main(String[] args) {userrolls();
 		//}
-	public static int rand1(int min, int max) {
-		Random foo = new Random();
-		int randomNumber = foo.nextInt(max - min) + min;
-		if (randomNumber == min) {
-			return min + 1;
+	public static int rand1(int min, int max) {					//Requires to int's to be defined from another class/function
+		Random foo = new Random();								//foo is a new random number
+		int randomNumber = foo.nextInt(max - min) + min;		// defines the scope
+		if (randomNumber == min) {								// if the number is equal to min add one
+			return min + 1;										//I can do alway with this and set the scope as 1, number.
 		} else {
-			return (int)randomNumber;
+			return (int)randomNumber;							//returns random number.
 		}
 
 	}
-
-/*	public static ArrayList<Integer> userrolls(){
-	ArrayList<Integer> roll = new ArrayList<Integer>();
-		int numUsers = Users.mainUsers().size();
-		int counter = 0;
-		int temprolls;
-		do {
-			temprolls = rand1(1,6);
-			roll.add(temprolls);
-			counter++;
-		}while(numUsers>counter);
-	return roll;
-	}
-*/
-
-
-
 }
 

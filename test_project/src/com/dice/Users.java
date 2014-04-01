@@ -14,7 +14,7 @@ public class Users {
 		ArrayList<String> name = new ArrayList<String>();
 		Scanner input = new Scanner(System.in);
 		String user = input.next();
-		while (!user.equals("exit")){
+		while (!user.equals("exit")){					//When the user types "exit" the program will exit the array and return the array.
 			name.add(user);
 			user = input.next();						// Input.next is defined when the user presses enter. its
 		}												// A function of System.scanner.
