@@ -16,8 +16,9 @@ public class Dice {
 	    Scanner input = new Scanner(System.in);						//
 	    String answer = input.next();								//
 			if (answer.equalsIgnoreCase("1")){						//
-			float result = rand(1,6);
+			int result = DiceRoll.rand1(1,6);
 				System.out.println(result);
+				main(null);
 			}
 			else if(answer.equalsIgnoreCase("2")){
 				ArrayBuilder.main();
@@ -25,6 +26,12 @@ public class Dice {
 			else if (answer.equals("3")){
 				System.out.println(SnakeEyes.slover());
 				main(null);
+			}
+	        else if (answer.equalsIgnoreCase("exit")){
+				System.out.close();
+			}
+	    else{
+				System.out.println("Please Enter a valid choice.");
 			}
 	}
 	public static float rand(int min, int max) {
